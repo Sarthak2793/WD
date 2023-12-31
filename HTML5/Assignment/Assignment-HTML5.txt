@@ -1,0 +1,54 @@
+
+Module (HTML5) – 3
+
+------------------------------------------------------
+
+1) What are the new tags added in HTML5?
+
+Ans - Some widely used HTML 5 tags are stated below :
+
+        <article>            <nav>             <audio>
+        <aside>             <section>        <video>
+        <figcaption>      <embed>
+        <footer>            <canvas>
+        <header>           <svg>
+
+----------------
+
+2) How to embed audio and video in a webpage?
+
+Ans - Audio tag : <audio src="./test.mp3" controls autoplay></audio>
+         Video tag : <video src="./test.mp4" controls autoplay></video>
+
+----------------
+
+3) Semantic element in HTML5?
+
+Ans - Semantic HTML elements are those that clearly describe their meaning in a human- and machine-readable way.
+
+e.g : <form> , <header> , <footer> , <section> , <nav>, <aside> etc...
+
+----------------
+
+4) Canvas and SVG tags
+
+Canvas tag : Script is needed in canvas.
+
+<canvas id="mycanvas"></canvas>
+    <script>
+        var cnv = document.getElementById("mycanvas");
+        var cnb = cnv.getContext("2d")
+        cnb.fillStyle = 'green';
+        cnb.fillRect(50,10,600,600);
+    </script>
+
+SVG tag : Script is not needed for SVG.
+
+<svg viewBox="10 10 300 100" fill="gray" stroke="green">
+        <circle cx="40" cy="40" r="30"></circle>
+</svg>
+
+
+
+
+
