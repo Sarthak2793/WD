@@ -1,0 +1,2250 @@
+Module (CSS and CSS 3) -2
+
+1) What are the benefits of using CSS?
+Ans. - HTML just provides structure of the web page, while CSS                     provides look and feel, with CSS we can make eye catching websites.
+-   By using CSS we can also create responsive designs that adapt to various devices. CSS also allows animations and transitions for enhancing the user experience.
+
+2) What are the disadvantages of CSS?
+Ans. - Developers need to write browser specific CSS code, because the visual representation of web page may be different for different browsers.
+-	Complex for beginners as it has lots of properties so remembering all the properties sometimes may seems difficult for a developer.
+
+-	CSS does not provides any security features. So developers must be cautious while implementing it.
+
+-	It’s essential to minimize and optimize CSS code otherwise poorly written or too much lengthy CSS codes can affect the website performance by slowing it down.
+
+3) What is the difference between CSS2 and CSS3?
+Ans.  -  CSS2 has limited selectors options, while CSS3 introduced some new useful selectors like attribute, nth – child and adjacent sibling selectors that allows you to select specific elements more easily.
+-	CSS2 introduced a new box model which included padding, borders, and margins. CSS3 introduced the flexible box layout module, which allows for more flexible layouts.
+
+-	CSS3 introduced new animation and transition properties, such as transition, animation, and key frames, which allow for more dynamic and engaging web designs.
+
+4) Name a few CSS style components
+Ans. - Here are some common style components of CSS :
+•	Selector: Class name, id name or element name that is target.
+•	Attribute: Name of the attribute you want to style for example border, colour, background, position etc.
+•	Value of Property: Value that will be assigned to attribute.
+
+e.g : p {
+	  color : red;
+	 text-align : left;
+
+(Here p is selector, color is attribute and value is red.)
+
+
+5) What do you understand by CSS opacity?
+
+Ans. - The opacity CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden.
+
+e.g : background-color : rgba(red,green,blue,0.5);
+
+(Here red, green and blue are the values of the color and 0.5 is the alpha value which is also mentioned as opacity of that color.)
+
+6) How can the background color of an element be changed?
+
+Ans. - We can change the background color of an element by using it’s name or it’s class name or it’s id name.
+
+e.g :  p {
+             background-color : red;
+            }
+          
+
+
+7) How can image repetition of the background be controlled?
+
+Ans. – In CSS there is a property called background-repeat property by using this we can control the repetition of the image in the background.
+
+e.g :  div{
+	       background-repeat : no-repeat;
+               }
+
+
+8) What is the use of the background-position property?
+
+Ans. - CSS background position property sets the initial position for each background image.
+
+-	It has total 9 values : left top, left center, left bottom
+      : right top, right center, right bottom
+      : center top, center center,
+        center bottom
+
+e.g : body{
+		background position : center top;
+                  }
+9) Which property controls the image scroll in the background?
+
+Ans. - The background-attachment property of CSS sets whether a background image scrolls with the page or will be fixed in the background.
+
+-	It has several values like scroll, fixed, local, initial and inherit.
+
+e.g :  body  {
+                     background-image: url("img.jpg");
+                     background-repeat: no-repeat;
+                     background-attachment: fixed;
+                     }
+
+
+10) Why should background and color be used as separate   properties?
+
+Ans. - Background is a shorthand property that allows you to set all the background properties including the background-color in one line.
+
+-	While background-color property will sets only the color of the background of an element.
+
+
+e.g : div{
+              	background : #f9f9f9 url(bg-img.jpg);
+              }
+
+(Here by using only background property we can write multiple background properties separated by space.)
+
+
+e.g : div{
+		background-color : #f9f9f9;
+              }
+
+(Here by using background-color property we can only set background color of the element.)
+
+
+11) How to center block elements using CSS1?
+
+Ans. – For centring the block elements in CSS1 we have to use margin property. We don’t have to set the values of margin manually, Instead we can use auto property of margin to center the block elements.
+
+e.g : div{
+		height : 300px;
+		width : 300px;
+		background-color : red;
+		margin : auto;
+              }
+
+
+
+12) How to maintain the CSS specifications?
+
+Ans. – CSS specifications can be maintained by the following :
+
+1.	Positioning
+2.	Box Model
+3.	Typographic
+4.	Visual
+
+
+
+13) What are the ways to integrate CSS as a web page?
+
+Ans. – There are 3 ways to integrate CSS as a web page :
+
+1.	Inline : To style a single element in HTML, we can directly write style attribute within the tag and give properties to it.
+
+e.g : <p style=”color : red;”> This is paragraph. </p>
+
+
+2.	Internal : By adding CSS to the head section of our HTML document, we can embed an internal stylesheet.
+
+e.g : <head>
+        <style>
+		p {color : red;}
+        </style>
+        </head>
+
+        <body>
+		<p> This is paragraph. </p>
+        </body>
+
+
+3.	External : First creating the separate file with .css extension then add it’s path in link tag in HTML.
+
+e.g : p{color : red;}
+
+Then, add the link tag in head section of the HTML page.
+
+<head>
+<link href = “style.css” rel = “stylesheet”>
+</head>
+
+<body>
+<p> This is paragraph. </p>
+</body>
+
+
+
+14) What is embedded style sheets?
+
+Ans. - It allows you to define styles for a particular HTML document as a whole in one place. This is done by embedding the <style></style> tags containing the CSS properties in the head of your document.
+
+e.g : 
+
+<head>
+<style>
+		h1{
+			color : red;
+    }
+
+p{
+	background-color : blue;
+}
+         </style>
+</head>
+
+
+
+15) What are the external style sheets?
+
+Ans. - An external style sheet is a separate CSS file that can be accessed by creating a link within the head section of the webpage.
+
+
+e.g : <head>
+        	<link href = “style.css” rel = “stylesheet”>
+        </head>
+
+
+16) What are the advantages and disadvantages of using external style sheets?
+
+Advantages : 
+-	One change to the style sheet will change all linked pages
+-	You can create classes of styles that can then be used on many different HTML elements
+-	Consistent look and feel across multiple web pages
+-	Improved load times because the css file is downloaded once and applied to each relevant page as needed
+Disadvantages :
+-	While implementing style sheets, we need to test Web pages with multiple browsers in order to check compatibility issues
+-	An extra download is essential to import style information for each file
+-	The execution of the file may be deferred till the external style sheet is loaded
+
+
+17) What is the meaning of the CSS selector?
+Ans. - CSS selectors are used to define the elements you want to style with CSS. There are many different types of CSS selectors, each with their own unique syntax. These tell the browser which elements to apply CSS property values to.
+-	Some commonly used CSS selectors are : ID selector, Class selector, Universal selector, Group selector, Pseudo selectors etc.
+
+18) What are the media types allowed by CSS?
+Ans. - Given below is a list of various media types :
+1.	All – For all devices
+2.	Aural – For speech synthesizers
+3.	Braille - For braille tactile feedback devices
+4.	Embossed - For paged braille printers
+5.	Handheld - For handheld devices
+6.	Print - For documents viewed on screen in print preview mode
+7.	Projection - For projectors
+8.	Screen - For computer screens
+9.	Tty and Tv - For portable & television type devices
+
+19) What is the rule set?
+Ans. - A CSS rule set contains one or more selectors and one or more declarations.
+e.g :  h1 {					
+		color : red;
+		text-align : center;
+    }
+(Here h1 is selector, color and text-align are properties, red and center are values of that properties.)
+
+
+20) Create image gallery using display grid with responsive
+
+Code :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Image Gallery</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .img-gallery {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+      }
+      .navbar {
+        width: 15%;
+        color: white;
+        text-align: right;
+        padding: 30px;
+      }
+      .navbar h4 {
+        margin-bottom: 24px;
+      }
+      .navbar i {
+        font-size: 12px;
+        margin: 0px 6px;
+      }
+      .navbar ul {
+        list-style-type: none;
+        font-size: 12px;
+        margin: 24px 0px;
+      }
+      .navbar ul li {
+        margin-bottom: 12px;
+      }
+      .navbar li:hover {
+        color: red;
+      }
+      .grid-container {
+        display: grid;
+        gap: 12px;
+        background-color: black;
+        width: 85%;
+      }
+
+      .grid-container > div {
+        height: 180px;
+        background-size: cover;
+      }
+
+      .item1 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background: url("/WD/CSS/Grid/imgs/i-1.jpg");
+      }
+      .item2 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        background: url("/WD/CSS/Grid/imgs/i-2.jpg");
+      }
+      .item3 {
+        background: url("/WD/CSS/Grid/imgs/i-3.jpg");
+      }
+      .item4 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        background: url("/WD/CSS/Grid/imgs/i-4.jpg");
+      }
+      .item5 {
+        background: url("/WD/CSS/Grid/imgs/i-5.jpg");
+      }
+      .item6 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background: url("/WD/CSS/Grid/imgs/i-6.jpg");
+      }
+      .item7 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        background: url("/WD/CSS/Grid/imgs/i-7.jpg");
+      }
+      .item8 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background: url("/WD/CSS/Grid/imgs/i-8.jpg");
+      }
+      .item9 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        background: url("/WD/CSS/Grid/imgs/i-9.jpg");
+      }
+      .item10 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        background: url("/WD/CSS/Grid/imgs/i-10.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-gallery">
+      <div class="grid-container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+        <div class="item7"></div>
+        <div class="item8"></div>
+        <div class="item9"></div>
+        <div class="item10"></div>
+      </div>
+
+      <div class="navbar">
+        <h4>SHUTTER</h4>
+        <ul>
+          <li>HOME</li>
+          <li>PHOTOS</li>
+          <li>BIO</li>
+          <li>BLOG</li>
+          <li>CONTACT</li>
+        </ul>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+21) Create below example with the help of clip path
+
+Code :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Clip Path</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .bg-img {
+        padding: 50px 40px;
+        position: relative;
+        background: url("/WD/CSS/Clippath/imgs/bg-img.jpg");
+        height: 80vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 0%);
+      }
+      .bg-cover {
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.6;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0 100px;
+      }
+      .logo {
+        border: 2px solid white;
+        padding: 4px 0;
+      }
+      .logo span {
+        background-color: white;
+        color: black;
+        padding: 5px 7px;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      .logo p {
+        font-size: 28px;
+        color: white;
+        letter-spacing: 5px;
+      }
+      .list-item ul {
+        list-style: none;
+      }
+      .list-item ul li {
+        color: white;
+        display: inline-block;
+        padding: 10px 12px;
+        position: relative;
+        margin-right: 10px;
+      }
+      .list-item ul li:hover {
+        color: rgb(209, 35, 35);
+      }
+      li::after {
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: rgb(209, 35, 35);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: 0.5s;
+      }
+      li:hover::after {
+        width: 100%;
+      }
+      .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 30px 0px;
+        margin-top: 90px;
+      }
+      .icons {
+        color: grey;
+      }
+      .icons:hover {
+        color: rgb(209, 35, 35);
+      }
+      .center-text p,
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      .center-text h1 {
+        margin: 20px 0px;
+        font-size: 42px;
+        letter-spacing: 5px;
+      }
+      .center-text .desc-text {
+        font-size: 10px;
+        line-height: 1.7;
+        max-width: 450px;
+        text-align: center;
+        font-weight: 100;
+      }
+      .button {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .button .btn {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 2px;
+        padding: 8px 18px;
+        margin-right: 24px;
+        color: white;
+        font-size: 10px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: rgb(209, 35, 35);
+        border: none;
+      }
+      .anchor-icon {
+        position: absolute;
+        top: 92%;
+        left: 49%;
+      }
+      .anchor-bg {
+        background-color: white;
+        padding: 12px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 16px gray;
+      }
+      .cards {
+        padding: 60px 200px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .card {
+        padding: 20px;
+        max-width: 300px;
+        text-align: center;
+      }
+      .card h5 {
+        margin-bottom: 10px;
+      }
+      .card p {
+        font-size: 10px;
+        color: gray;
+        line-height: 1.5;
+      }
+      .card i {
+        color: rgb(209, 35, 35);
+      }
+      .card #border-glass {
+        rotate: 47deg;
+      }
+      .card .fa-glasses {
+        rotate: -45deg;
+      }
+      .card .icon-border {
+        padding: 14px;
+        border: 1px solid lightgray;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+      .underline {
+        height: 1px;
+        width: 15%;
+        background-color: gray;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      .card:hover .icon-border {
+        border: 1px solid rgb(209, 35, 35);
+      }
+      .card:hover h5 {
+        color: rgb(209, 35, 35);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="bg-cover"></div>
+      <div class="navbar">
+        <div class="logo">
+          <p><span>L</span>ogo</p>
+        </div>
+        <div class="list-item">
+          <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>PORTFOLIO</li>
+            <li>PRICING</li>
+            <li>TEAM</li>
+            <li>BLOG</li>
+            <li>CONTACT</li>
+          </ul>
+          <div class="hover-line"></div>
+        </div>
+      </div>
+      <div class="text">
+        <div class="icons">
+          <i class="fa-solid fa-square-caret-left fa-2x"></i>
+        </div>
+        <div class="center-text">
+          <p>Our Clients Are Our First Priority</p>
+          <h1>WELCOME TO SKY</h1>
+          <p class="desc-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            architecto tempore eius mollitia magni quo debitis, possimus nobis
+            cumque! Numquam laudantium voluptate. possimus nobis cumque! Numquam
+            laudantium voluptate.
+          </p>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-square-caret-right fa-2x"></i>
+        </div>
+      </div>
+      <div class="button">
+        <button class="btn">GET STARTED NOW</button>
+        <button class="btn">LEARN MORE</button>
+      </div>
+    </div>
+    <div class="anchor-icon">
+      <div class="anchor-bg">
+        <i class="fa-solid fa-anchor" style="color: rgb(209, 35, 35)"></i>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div id="border-glass" class="icon-border">
+          <i class="fa-solid fa-glasses"></i>
+        </div>
+        <h5>SLEEK DESIGN</h5>
+        <div class="underline"></div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+          consequuntur?
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-border">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <h5>CLEAN CODE</h5>
+        <div class="underline"></div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+          consequuntur?
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-border">
+          <i class="fa-regular fa-lightbulb"></i>
+        </div>
+        <h5>CREATIVE IDEAS</h5>
+        <div class="underline"></div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+          consequuntur?
+        </p>
+      </div>
+      <div class="card">
+        <div class="icon-border">
+          <i class="fa-regular fa-comments"></i>
+        </div>
+        <h5>FREE SUPPORT</h5>
+        <div class="underline"></div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+          consequuntur?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+22) Multiple background one side bg-color other side contain image as bg
+
+Code :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Multiple Bg</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .img-bg {
+        height: 80vh;
+        background-color: rgb(209, 35, 35);
+        display: flex;
+        position: relative;
+      }
+
+      .left {
+        background-color: rgb(26, 22, 22);
+        width: 53%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 20px;
+        padding-right: 60px;
+      }
+      .right {
+        width: 45%;
+        background: url("/WD/CSS/MultipleBg/imgs/tablet.jpg");
+        background-size: cover;
+      }
+      .nav .fa-circle {
+        color: rgb(61, 48, 48);
+        margin-bottom: 10px;
+        font-size: 8px;
+      }
+      .left h3 {
+        color: white;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-right: 3px solid rgb(209, 35, 35);
+        padding-right: 12px;
+      }
+      .left .text {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+      }
+      .text h5 {
+        color: rgb(209, 35, 35);
+        font-weight: bolder;
+      }
+      .text p {
+        font-size: 10px;
+        max-width: 500px;
+        color: white;
+        font-weight: lighter;
+        line-height: 1.8;
+      }
+      .text h3,
+      p {
+        margin-bottom: 30px;
+      }
+      .img-bg .icon-bg-1 {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        left: 55.3%;
+        top: 32%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 5px white;
+        color: rgb(214, 122, 122);
+      }
+      .img-bg .icon-bg-2 {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        left: 55.3%;
+        top: 48%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 5px white;
+        color: rgb(214, 122, 122);
+      }
+      .img-bg .icon-bg-3 {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        left: 55.3%;
+        top: 64%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 5px white;
+        color: rgb(214, 122, 122);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-bg">
+      <div class="icon-bg-1">
+        <i class="fa-solid fa-display"></i>
+      </div>
+      <div class="icon-bg-2">
+        <i class="fa-solid fa-layer-group"></i>
+      </div>
+      <div class="icon-bg-3">
+        <i class="fa-solid fa-camera"></i>
+      </div>
+      <div class="left">
+        <div class="nav">
+          <i class="fa-solid fa-circle"></i><br />
+          <i class="fa-solid fa-circle" style="color: rgb(216, 107, 107)"></i
+          ><br />
+          <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="text">
+          <h3>OUR SERVICES</h3>
+          <div>
+            <h5>WEB DESIGN</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem
+              ipsum dolor sit amet consectetur adipisicing elit sit amet
+              consectetur adipisicing elit
+            </p>
+          </div>
+          <div>
+            <h5>PRINT DESIGN</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem
+              ipsum dolor sit amet consectetur adipisicing elit sit amet
+              consectetur adipisicing elit
+            </p>
+          </div>
+          <div>
+            <h5>PHOTOGRAPHY</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem
+              ipsum dolor sit amet consectetur adipisicing elit sit amet
+              consectetur adipisicing elit
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
+
+
+
+23) Create below example using css waves generator
+
+Code :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CSS Wave</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .bg-img {
+        height: 100vh;
+        position: relative;
+        background: url("/WD/CSS/WaveGenerator/imgs/bg-2.jpg");
+        background-size: cover;
+        position: relative;
+      }
+      .bg-img h2,
+      p {
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+      }
+      .bg-img h2 {
+        letter-spacing: 3px;
+      }
+      .bg-img p {
+        font-size: 12px;
+      }
+      .bg-img .text {
+        position: absolute;
+        top: 15%;
+        left: 40%;
+      }
+      .underline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .dash {
+        height: 1px;
+        width: 20%;
+        background-color: gray;
+        margin-top: 3px;
+      }
+      .fa-circle {
+        margin: 0px 10px;
+        color: rgb(209, 35, 35);
+      }
+      .wave {
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        background: url("/WD/CSS/WaveGenerator/imgs/svg.png");
+        bottom: 0;
+        opacity: 0.5;
+        z-index: 0;
+      }
+      .circle {
+        z-index: 1;
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        padding: 20px;
+        background-image: url("/WD/CSS/WaveGenerator/imgs/img-1.png");
+        background-size: cover;
+        /* background-color: white; */
+        border: 2px solid rgb(209, 35, 35);
+        border-radius: 50%;
+      }
+      .circle-1 {
+        top: 50%;
+        left: 15%;
+        background-image: url("/WD/CSS/WaveGenerator/imgs/img-1.png");
+      }
+      .circle-2 {
+        top: 46%;
+        left: 32%;
+        height: 30px;
+        width: 30px;
+        background-image: url("/WD/CSS/WaveGenerator/imgs/img-2.jpg");
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+      }
+      .circle-3 {
+        top: 52%;
+        left: 50%;
+        background-image: url("/WD/CSS/WaveGenerator/imgs/img-3.jpg");
+      }
+      .circle-4 {
+        top: 54%;
+        left: 65%;
+        background-image: url("/WD/CSS/WaveGenerator/imgs/img-5.jpg");
+      }
+      .circle-5 {
+        top: 49%;
+        left: 80%;
+        background-image: url("/WD/CSS/WaveGenerator/imgs/img-4.jpg");
+      }
+      .line {
+        height: 2px;
+        width: 3%;
+        background-color: gray;
+        position: absolute;
+        top: 61%;
+        left: 33%;
+        rotate: 90deg;
+      }
+      .designation {
+        z-index: 2;
+        position: absolute;
+        top: 67%;
+        left: 29.5%;
+      }
+      .designation h3 {
+        color: black;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="text">
+        <h2>OUR TEAM</h2>
+        <p>Meet the craziest team.Share your thoughts with them.</p>
+        <div class="underline">
+          <div class="dash"></div>
+          <div>
+            <i class="fa-solid fa-circle" style="font-size: 8px"></i>
+          </div>
+          <div class="dash"></div>
+        </div>
+      </div>
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+      <div class="circle circle-4"></div>
+      <div class="circle circle-5"></div>
+      <div class="line"></div>
+      <div class="designation">
+        <h3>WEB DESIGNER</h3>
+        <p>UI/UX Designer</p>
+      </div>
+      <div class="wave"></div>
+    </div>
+  </body>
+</html>
+
+
+
+24) Create Layouts
+
+Code :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(233, 233, 233);
+      }
+      .container {
+        display: flex;
+        padding: 20px 100px;
+        column-gap: 30px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .card {
+        box-shadow: 0px 0px 5px rgb(87, 87, 87, 0.5);
+      }
+      .upper {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: rgb(87, 87, 87);
+      }
+      .upper h3 {
+        color: white;
+      }
+      .lower {
+        background-color: white;
+        padding: 10px 20px;
+      }
+      .lower p {
+        text-align: justify;
+        max-width: 320px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: rgb(82, 82, 82);
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .footer button {
+        padding: 5px 16px;
+        background-color: white;
+        color: gray;
+        border-color: gray;
+        border-radius: 3px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .footer #margin {
+        margin-left: -6px;
+      }
+      .left-text {
+        display: flex;
+      }
+      .left-text i {
+        font-size: 8px;
+        margin-right: 5px;
+        padding: 4px 0px;
+      }
+      .left-text p {
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="upper">
+          <h3>Thumbnail</h3>
+        </div>
+        <div class="lower">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            quis dicta modi, laudantium rem harum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+          </p>
+          <div class="footer">
+            <div>
+              <button>View</button>
+              <button id="margin">Edit</button>
+            </div>
+            <div class="left-text">
+              <i class="fa-regular fa-gem"></i>
+              <p>lorem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="upper">
+          <h3>Thumbnail</h3>
+        </div>
+        <div class="lower">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            quis dicta modi, laudantium rem harum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+          </p>
+          <div class="footer">
+            <div>
+              <button>View</button>
+              <button id="margin">Edit</button>
+            </div>
+            <div class="left-text">
+              <i class="fa-regular fa-gem"></i>
+              <p>lorem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="upper">
+          <h3>Thumbnail</h3>
+        </div>
+        <div class="lower">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            quis dicta modi, laudantium rem harum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+          </p>
+          <div class="footer">
+            <div>
+              <button>View</button>
+              <button id="margin">Edit</button>
+            </div>
+            <div class="left-text">
+              <i class="fa-regular fa-gem"></i>
+              <p>lorem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="upper">
+          <h3>Thumbnail</h3>
+        </div>
+        <div class="lower">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            quis dicta modi, laudantium rem harum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+          </p>
+          <div class="footer">
+            <div>
+              <button>View</button>
+              <button id="margin">Edit</button>
+            </div>
+            <div class="left-text">
+              <i class="fa-regular fa-gem"></i>
+              <p>lorem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="upper">
+          <h3>Thumbnail</h3>
+        </div>
+        <div class="lower">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            quis dicta modi, laudantium rem harum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+          </p>
+          <div class="footer">
+            <div>
+              <button>View</button>
+              <button id="margin">Edit</button>
+            </div>
+            <div class="left-text">
+              <i class="fa-regular fa-gem"></i>
+              <p>lorem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="upper">
+          <h3>Thumbnail</h3>
+        </div>
+        <div class="lower">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            quis dicta modi, laudantium rem harum! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit
+          </p>
+          <div class="footer">
+            <div>
+              <button>View</button>
+              <button id="margin">Edit</button>
+            </div>
+            <div class="left-text">
+              <i class="fa-regular fa-gem"></i>
+              <p>lorem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+25) Create below example  responsive media query (use given link figma file)
+
+HTML :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <title>TeamFlow</title>
+  </head>
+  <body>
+    <!-- Header Starts... -->
+
+    <div class="header">
+      <div class="container">
+        <!-- Navbar Starts... -->
+        <div class="nav">
+          <div class="row">
+            <div class="col logo-container">
+              <div class="logo">
+                <p>team.flow</p>
+              </div>
+            </div>
+            <div class="col menu-container">
+              <ul>
+                <li>How it Works<i class="fa-solid fa-angle-down"></i></li>
+                <li>Product<i class="fa-solid fa-angle-down"></i></li>
+                <li>Pricing</li>
+                <li>Resources<i class="fa-solid fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="col btn-container">
+              <div class="login-btn"><a href="">Log In</a></div>
+              <div class="get-started">
+                <button>Get started free</button>
+              </div>
+            </div>
+            <div class="toggler-icon">
+              <i class="fa-solid fa-bars"></i><br />
+              <p>Menu</p>
+            </div>
+          </div>
+        </div>
+        <!-- Navbar Ends... -->
+      </div>
+    </div>
+    <!-- Header Ends... -->
+
+    <!-- Text Section Starts -->
+    <div class="text-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <button class="save-btn">Save 90%</button>
+            <button class="get-account-btn">Get account of $59 ></button>
+            <h1>
+              Manage the team <br />
+              everyone wants to be on
+            </h1>
+            <p>
+              Simple platform that lets you master what great managers do
+              best,<br />
+              as develop trust, collaborate, and drive team performance.
+            </p>
+            <div class="email-input">
+              <input type="text" placeholder="name@yourcompany.com" />
+              <button>Try it free</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Text Section Ends -->
+
+    <!-- Image Section Starts -->
+    <div class="image-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="/WD/CSS/Figma-project/imgs/Graph 2 1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Image Section Ends -->
+
+    <!-- Trusted by Section Starts-->
+    <div class="trusted-by-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>TRUSTED BY OVER <strong>10,000+</strong> WORLD'S BEST TEAMS</p>
+            <div class="company-imgs">
+              <img src="/WD/CSS/Figma-project/imgs/google-2015a 1.png" alt="" />
+              <img src="/WD/CSS/Figma-project/imgs/airbnb 1.png" alt="" />
+              <img src="/WD/CSS/Figma-project/imgs/Group.png" alt="" />
+              <img src="/WD/CSS/Figma-project/imgs/hubspot 1.png" alt="" />
+              <img src="/WD/CSS/Figma-project/imgs/slack-2 1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Trusted by Section Ends-->
+
+    <!-- Timeline Section Starts -->
+    <div class="timeline-section">
+      <div class="container">
+        <div class="row">
+          <div class="col left-side">
+            <img src="/WD/CSS/Figma-project/imgs/timeline-left.png" alt="" />
+          </div>
+          <div class="col right-side">
+            <div class="text-block-1">
+              <h3>Survey your team</h3>
+              <p>
+                Powerful questions that get to the heart of how team members
+                really feel.
+              </p>
+            </div>
+            <div class="text-block">
+              <h3>Resolve issues quickly</h3>
+              <p>Anonymous messaging that connects managers and employees.</p>
+            </div>
+            <div class="text-block">
+              <h3>Plan your 1-on-1s</h3>
+              <p>
+                Plan meetings together and give a stake employees and teams.
+              </p>
+            </div>
+            <div class="text-block-4">
+              <h3>Track your progress</h3>
+              <p>
+                Easy-to-read reports and sharable results help managers and
+                teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Timeline Section Ends -->
+
+    <!-- Works Section Starts -->
+    <div class="work-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Make your work easier</h1>
+            <div class="card-section">
+              <div class="card">
+                <img src="/WD/CSS/Figma-project/imgs/c-1.png" alt="" />
+                <h4>Team Surveys & Reports</h4>
+                <p>
+                  Short, anonymous surveys track your team’s needs weekly so you
+                  can focus.
+                </p>
+              </div>
+              <div class="card">
+                <img src="/WD/CSS/Figma-project/imgs/c-2.png" alt="" />
+                <h4>Collaborative 1:1</h4>
+                <p>
+                  Build relationships by planning 1-on-1s and start meetings.
+                </p>
+              </div>
+              <div class="card">
+                <img src="/WD/CSS/Figma-project/imgs/c-3.png" alt="" />
+                <h4>Learning Center</h4>
+                <p>
+                  Quickly get solutions tailored to your personal challenges
+                  from the manager.
+                </p>
+              </div>
+              <div class="card">
+                <img src="/WD/CSS/Figma-project/imgs/c-4.png" alt="" />
+                <h4>Anonymous Messaging</h4>
+                <p>
+                  Develop trust in a safe channel for important conversations.
+                </p>
+              </div>
+              <div class="card">
+                <img src="/WD/CSS/Figma-project/imgs/c-5.png" alt="" />
+                <h4>Conversation Engine</h4>
+                <p>Communicate confidently with recommended talking points.</p>
+              </div>
+              <div class="card">
+                <img src="/WD/CSS/Figma-project/imgs/c-6.png" alt="" />
+                <h4>Exclusives Manager</h4>
+                <p>
+                  Access manager tips, activities and best practices from our
+                  team of experts.
+                </p>
+              </div>
+            </div>
+            <button class="view-more">View more benefits</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Works Section Ends -->
+
+    <!-- Work Hour Section Starts -->
+    <div class="hours-worked">
+      <div class="container">
+        <div class="row">
+          <div class="col left-side">
+            <h1>
+              We work how you<br />
+              work everyday
+            </h1>
+            <p>
+              Since the easiest things to use actually get used, we adapts to
+              the way your team works-not the other way around.
+            </p>
+            <button>Get started free</button>
+          </div>
+          <div class="col right-side">
+            <img src="/WD/CSS/Figma-project/imgs/hours-worked.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Work Hour Section Ends -->
+
+    <!-- Customers Section Starts -->
+    <div class="customers-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="text-section">
+              <h3>
+                Why customers love <br />
+                working with us
+              </h3>
+              <p>
+                “It's amazing what has helped me learn about my team. I don't
+                worry about blindspots anymore, and 1-on-1s have never been more
+                productive. The team loves it.”
+              </p>
+            </div>
+            <div class="post-section">
+              <div class="post-section-1">
+                <div class="post-section-img-1">
+                  <img src="/WD/CSS/Figma-project/imgs/cu-1.png" alt="" />
+                </div>
+                <div class="post-section-text-1">
+                  <h5>Jorge Robertson</h5>
+                  <p>CS at Google</p>
+                </div>
+              </div>
+              <div class="post-section-2">
+                <div class="post-section-img-2">
+                  <img src="/WD/CSS/Figma-project/imgs/cu-2.png" alt="" />
+                </div>
+                <div class="post-section-text-2">
+                  <h5>Francisco Bell</h5>
+                  <p>Designer at Microsoft</p>
+                </div>
+              </div>
+              <div class="post-section-3">
+                <div class="post-section-img-3">
+                  <img src="/WD/CSS/Figma-project/imgs/cu-3.png" alt="" />
+                </div>
+                <div class="post-section-text-3">
+                  <h5>Beth Fox</h5>
+                  <p>Developer at Airbnb</p>
+                </div>
+              </div>
+            </div>
+            <div class="store-section">
+              <div class="store-text">
+                <h3>84% of employees who use trust their direct manager</h3>
+              </div>
+              <div class="store-icon">
+                <img src="/WD/CSS/Figma-project/imgs/google-play.png" alt="" />
+                <img src="/WD/CSS/Figma-project/imgs/apple.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Customers Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <div class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>Company<i class="fa-solid fa-angle-down"></i></h5>
+            <p>About Us</p>
+            <p>Blog</p>
+            <p>Careers</p>
+            <p>Contact Us</p>
+          </div>
+          <div class="col">
+            <h5>Support<i class="fa-solid fa-angle-down"></i></h5>
+            <p>Help Center</p>
+            <p>Safety Center</p>
+            <p>Community</p>
+          </div>
+          <div class="col">
+            <h5>Legal<i class="fa-solid fa-angle-down"></i></h5>
+            <p>Cookies Policy</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+          </div>
+          <div class="col">
+            <h5>Install App</h5>
+            <img
+              src="/WD/CSS/Figma-project/imgs/google-play-black.png"
+              alt=""
+            /><br />
+            <img src="/WD/CSS/Figma-project/imgs/apple-black.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section Ends -->
+
+    <!-- Footer Copyright Starts -->
+    <div class="footer-copyright">
+      <p>© 2020 - All rights reserved</p>
+      <div class="footer-social">
+        <img src="/WD/CSS/Figma-project/imgs/insta.png" alt="" />
+        <img src="/WD/CSS/Figma-project/imgs/dribble.png" alt="" />
+        <img src="/WD/CSS/Figma-project/imgs/twitter.png" alt="" />
+        <img src="/WD/CSS/Figma-project/imgs/youtube.png" alt="" />
+      </div>
+    </div>
+    <!-- Footer Copyright Ends -->
+  </body>
+</html>
+
+
+
+Style.css :
+
+/* PC */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #35414b;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVBAR STARTS */
+.nav {
+  padding: 28px 0px;
+}
+.nav .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo p {
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.col ul {
+  display: flex;
+  gap: 40px;
+}
+.col ul li {
+  list-style: none;
+  display: inline-block;
+  display: flex;
+  gap: 5px;
+  align-items: end;
+}
+.row .btn-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.login-btn a {
+  text-decoration: none;
+}
+.get-started button {
+  color: #794cff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.toggler-icon {
+  display: none;
+}
+/* NAVBAR ENDS */
+
+/* TEXT SECTION STARTS  */
+.text-section .row {
+  padding: 50px 0px;
+}
+.text-section .col {
+  text-align: center;
+}
+.text-section h1 {
+  font-size: 58px;
+  color: #35414b;
+  margin-top: 26px;
+  font-weight: 600;
+}
+.text-section p {
+  color: #4e5a65;
+  margin-top: 26px;
+  line-height: 24px;
+}
+.col .save-btn {
+  border: none;
+  background-color: #81c43b;
+  padding: 8px 14px;
+  border-radius: 100px;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+  /* font-weight: 500; */
+}
+.col .get-account-btn {
+  border: none;
+  background-color: #f2f9eb;
+  padding: 8px 14px;
+  padding-left: 32px;
+  border-radius: 0px 100px 100px 0px;
+  color: #35414b;
+  font-weight: 500;
+  margin-left: -30px;
+}
+.text-section .email-input {
+  margin-top: 26px;
+}
+.email-input input {
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #e1e5ea;
+  border-radius: 4px 0px 0px 4px;
+  width: 340px;
+  color: #97a5b5;
+  padding: 14px 50px 14px 14px;
+}
+.email-input button {
+  font-size: 16px;
+
+  font-weight: 400;
+  border: 1px solid #794cff;
+  border-radius: 0px 4px 4px 0px;
+  background-color: #794cff;
+  color: #ffffff;
+  padding: 14px 40px;
+  margin-left: -20px;
+}
+/* TEXT SECTION ENDS  */
+
+/* IMAGE SECTION STARTS */
+.image-section .row {
+  display: flex;
+  justify-content: center;
+}
+/* IMAGE SECTION ENDS */
+
+/* TRUSTED BY SECTION STARTS */
+.trusted-by-section {
+  text-align: center;
+  margin-top: 36px;
+  font-weight: 400;
+  color: #4e5a65;
+}
+.trusted-by-section .col p {
+  margin-bottom: 30px;
+}
+.trusted-by-section .company-imgs {
+  display: flex;
+  justify-content: space-around;
+}
+/* TRUSTED BY SECTION ENDS */
+
+/* TIMELINE SECTION STARTS */
+.timeline-section {
+  margin-top: 100px;
+  padding: 80px 0px;
+  background-color: #fbfafe;
+  border: 1px solid #f0ebfa;
+}
+.timeline-section .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.right-side .text-block-1 {
+  background-color: #f6f3fc;
+  border-radius: 0px 8px 8px 0px;
+  width: 372px;
+  padding: 24px 24px;
+  border-left: 8px solid #794cff;
+}
+.right-side .text-block {
+  width: 372px;
+  padding: 24px 24px;
+  border-bottom: 1px solid #f0ebfa;
+}
+.right-side .text-block-4 {
+  width: 372px;
+  padding: 24px 24px;
+}
+.timeline-section .right-side h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #35414b;
+}
+.timeline-section .right-side p {
+  font-weight: 400;
+  line-height: 24px;
+  color: #4e5a65;
+  margin-top: 8px;
+}
+/* TIMELINE SECTION ENDS */
+
+/* WORK SECTION STRATS */
+.work-section {
+  padding: 60px 0px;
+}
+.work-section h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+}
+.work-section .card {
+  width: 310px;
+}
+.card .img-bg {
+  padding: 30px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.card h4 {
+  margin-top: 18px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.card p {
+  margin-top: 8px;
+  line-height: 24px;
+}
+.work-section .card-section {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 80px;
+  justify-content: space-between;
+}
+.work-section .view-more {
+  display: none;
+}
+/* WORK SECTION ENDS */
+
+/* HOURS WORKED SECTION STARTS */
+.hours-worked {
+  padding: 80px 0px;
+  background-color: #fbfafe;
+  border: 1px solid #f0ebfa;
+  display: flex;
+}
+.hours-worked .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+.hours-worked .left-side h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.hours-worked .left-side p {
+  margin: 20px 0px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  width: 412px;
+}
+.hours-worked .left-side button {
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  background-color: #794cff;
+  color: #ffffff;
+  padding: 16px 20px;
+}
+/* HOURS WORKED SECTION ENDS */
+
+/* CUSTOMERS SECTION STARTS */
+.customers-section {
+  padding: 60px 0px;
+}
+.customers-section .text-section h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+.customers-section .text-section p {
+  margin: 0 auto;
+  text-align: center;
+  width: 543px;
+  margin-top: 42px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.customers-section .post-section {
+  margin-top: 68px;
+  display: flex;
+  justify-content: space-around;
+}
+.post-section .post-section-1 {
+  padding: 24px 60px 24px 24px;
+  border-top: 4px solid #35414b;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.post-section .post-section-2 {
+  padding: 24px 60px 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.post-section .post-section-3 {
+  padding: 24px 60px 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.post-section .post-section-1 h5 {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 6px;
+}
+.post-section .post-section-1 p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+.post-section .post-section-2 h5 {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 6px;
+}
+.post-section .post-section-2 p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+.post-section .post-section-3 h5 {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 6px;
+}
+.post-section .post-section-3 p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+.store-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: #796eff;
+  border-radius: 16px;
+  margin-top: 50px;
+}
+.store-text h3 {
+  width: 423px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+}
+.store-section .store-icon {
+  display: flex;
+  gap: 30px;
+}
+/* CUSTOMERS SECTION ENDS */
+
+/* FOOTER SECTION STARTS */
+.footer-section {
+  background-color: #1d2830;
+  margin-top: 40px;
+  padding: 60px 40px;
+  border-bottom: 1px solid #f0ebfa;
+}
+.footer-section .row {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-section h5 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer-section h5 i {
+  display: none;
+}
+.footer-section p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.footer-section img {
+  margin-bottom: 10px;
+}
+/* FOOTER SECTION ENDS */
+.footer-copyright {
+  color: #ffffff;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #1d2830;
+  padding: 20px 60px;
+}
+.footer-copyright p {
+  font-size: 14px;
+}
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+Media.css :
+
+/* For Mobile */
+
+@media only screen and (max-width: 414px) {
+  /* NAVBAR STARTS */
+  .row .btn-container {
+    display: none;
+  }
+  .menu-container {
+    display: none;
+  }
+  .logo p {
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .toggler-icon {
+    font-size: 24px;
+    display: block;
+  }
+  .toggler-icon p {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 8px;
+  }
+  /* NAVBAR ENDS */
+
+  /* TEXT SECTION STARTS */
+  .text-section .save-btn {
+    display: none;
+  }
+  .text-section .get-account-btn {
+    border-radius: 100px;
+    padding: 8px 14px;
+  }
+  .text-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    width: 318px;
+    text-align: center;
+  }
+  .text-section p {
+    font-weight: 400;
+    margin-top: 26px;
+    line-height: 24px;
+    text-align: center;
+    width: 318px;
+  }
+  .email-input input {
+    text-align: center;
+    border: 1px solid #e1e5ea;
+    border-radius: 4px;
+    color: #97a5b5;
+    padding: 14px;
+  }
+  .email-input button {
+    border: 1px solid #794cff;
+    border-radius: 4px;
+    background-color: #794cff;
+    color: #ffffff;
+    padding: 14px;
+    width: 340px;
+    margin: 8px 0px;
+  }
+  /* TEXT SECTION ENDS */
+
+  /* IMAGE SECTION STARTS */
+  .image-section img {
+    width: 100%;
+  }
+  /* IMAGE SECTION ENDS */
+
+  /* TRUSTED BY SECTION STARTS */
+  .trusted-by-section p {
+    font-size: 11px;
+  }
+  .trusted-by-section img {
+    width: 56px;
+    height: 18px;
+  }
+  .trusted-by-section img:nth-child(5) {
+    display: none;
+  }
+  /* TRUSTED BY SECTION ENDS */
+
+  /* TIMELINE SECTION STARTS */
+  .timeline-section .row {
+    flex-direction: column;
+  }
+  .timeline-section img {
+    width: 384px;
+    height: 303px;
+  }
+  .timeline-section .right-side {
+    text-align: center;
+  }
+  .timeline-section .text-block-1 {
+    border-left: none;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 8px solid #794cff;
+  }
+  /* TIMELINE SECTION ENDS */
+
+  /* WORK SECTION STARTS */
+  .work-section h1 {
+    font-size: 18px;
+  }
+  .work-section .card-section .card {
+    text-align: center;
+  }
+  .work-section .card-section img {
+    width: 48px;
+    height: 48px;
+  }
+  .work-section .card-section .card:nth-child(n + 4) {
+    display: none;
+  }
+  .work-section .view-more {
+    display: block;
+    border: 1px solid #ece5ff;
+    border-radius: 4px;
+    background-color: #ece5ff;
+    color: #7259fa;
+    padding: 14px;
+    width: 340px;
+    margin: 48px 0px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  /* WORK SECTION ENDS */
+
+  /* WORK HOUR SECTION STARTS */
+  .hours-worked .row {
+    flex-direction: column-reverse;
+  }
+  .hours-worked img {
+    width: 100%;
+  }
+  .hours-worked .left-side h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+  }
+  .hours-worked .left-side p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 322px;
+  }
+  .hours-worked .left-side button {
+    border: 1px solid #796eff;
+    border-radius: 4px;
+    background-color: #796eff;
+    color: #ece5ff;
+    padding: 14px;
+    width: 340px;
+    margin: 14px 0px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  /* WORK HOUR SECTION ENDS */
+
+  /* CUSTOMER SECTION STARTS */
+  .customers-section .text-section h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .customers-section .text-section p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    width: 336px;
+  }
+  .customers-section .post-section .post-section-2,
+  .customers-section .post-section .post-section-3 {
+    display: none;
+  }
+  .post-section .post-section-1 {
+    flex-direction: column;
+    border-top: none;
+  }
+  .post-section .post-section-1 p {
+    text-align: center;
+  }
+  .store-section {
+    border-radius: 0px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .store-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+    width: 322px;
+  }
+  .store-section .store-icon {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  /* CUSTOMER SECTION ENDS */
+
+  /* FOOTER SECTION STARTS */
+  .footer-section .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-section h5 {
+    position: relative;
+  }
+  .footer-section h5 i {
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .footer-section p {
+    display: none;
+  }
+  .footer-social {
+    display: none;
+  }
+  .footer-copyright p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #d9dbe1;
+  }
+  /* FOOTER SECTION ENDS */
+}
+
+
+
+
+
