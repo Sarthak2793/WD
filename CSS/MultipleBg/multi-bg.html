@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Multiple Bg</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .img-bg {
+        height: 80vh;
+        background-color: rgb(209, 35, 35);
+        display: flex;
+        position: relative;
+      }
+
+      .left {
+        background-color: rgb(26, 22, 22);
+        width: 53%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 20px;
+        padding-right: 60px;
+      }
+      .right {
+        width: 45%;
+        background: url("/WD/CSS/MultipleBg/imgs/tablet.jpg");
+        background-size: cover;
+      }
+      .nav .fa-circle {
+        color: rgb(61, 48, 48);
+        margin-bottom: 10px;
+        font-size: 8px;
+      }
+      .left h3 {
+        color: white;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-right: 3px solid rgb(209, 35, 35);
+        padding-right: 12px;
+      }
+      .left .text {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+      }
+      .text h5 {
+        color: rgb(209, 35, 35);
+        font-weight: bolder;
+      }
+      .text p {
+        font-size: 10px;
+        max-width: 500px;
+        color: white;
+        font-weight: lighter;
+        line-height: 1.8;
+      }
+      .text h3,
+      p {
+        margin-bottom: 30px;
+      }
+      .img-bg .icon-bg-1 {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        left: 55.3%;
+        top: 32%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 5px white;
+        color: rgb(214, 122, 122);
+      }
+      .img-bg .icon-bg-2 {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        left: 55.3%;
+        top: 48%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 5px white;
+        color: rgb(214, 122, 122);
+      }
+      .img-bg .icon-bg-3 {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        left: 55.3%;
+        top: 64%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 5px white;
+        color: rgb(214, 122, 122);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-bg">
+      <div class="icon-bg-1">
+        <i class="fa-solid fa-display"></i>
+      </div>
+      <div class="icon-bg-2">
+        <i class="fa-solid fa-layer-group"></i>
+      </div>
+      <div class="icon-bg-3">
+        <i class="fa-solid fa-camera"></i>
+      </div>
+      <div class="left">
+        <div class="nav">
+          <i class="fa-solid fa-circle"></i><br />
+          <i class="fa-solid fa-circle" style="color: rgb(216, 107, 107)"></i
+          ><br />
+          <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="text">
+          <h3>OUR SERVICES</h3>
+          <div>
+            <h5>WEB DESIGN</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem
+              ipsum dolor sit amet consectetur adipisicing elit sit amet
+              consectetur adipisicing elit
+            </p>
+          </div>
+          <div>
+            <h5>PRINT DESIGN</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem
+              ipsum dolor sit amet consectetur adipisicing elit sit amet
+              consectetur adipisicing elit
+            </p>
+          </div>
+          <div>
+            <h5>PHOTOGRAPHY</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem
+              ipsum dolor sit amet consectetur adipisicing elit sit amet
+              consectetur adipisicing elit
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

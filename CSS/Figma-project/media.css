@@ -1,0 +1,233 @@
+/* For Mobile */
+
+@media only screen and (max-width: 414px) {
+  /* NAVBAR STARTS */
+  .row .btn-container {
+    display: none;
+  }
+  .menu-container {
+    display: none;
+  }
+  .logo p {
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .toggler-icon {
+    font-size: 24px;
+    display: block;
+  }
+  .toggler-icon p {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 8px;
+  }
+  /* NAVBAR ENDS */
+
+  /* TEXT SECTION STARTS */
+  .text-section .save-btn {
+    display: none;
+  }
+  .text-section .get-account-btn {
+    border-radius: 100px;
+    padding: 8px 14px;
+  }
+  .text-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    width: 318px;
+    text-align: center;
+  }
+  .text-section p {
+    font-weight: 400;
+    margin-top: 26px;
+    line-height: 24px;
+    text-align: center;
+    width: 318px;
+  }
+  .email-input input {
+    text-align: center;
+    border: 1px solid #e1e5ea;
+    border-radius: 4px;
+    color: #97a5b5;
+    padding: 14px;
+  }
+  .email-input button {
+    border: 1px solid #794cff;
+    border-radius: 4px;
+    background-color: #794cff;
+    color: #ffffff;
+    padding: 14px;
+    width: 340px;
+    margin: 8px 0px;
+  }
+  /* TEXT SECTION ENDS */
+
+  /* IMAGE SECTION STARTS */
+  .image-section img {
+    width: 100%;
+  }
+  /* IMAGE SECTION ENDS */
+
+  /* TRUSTED BY SECTION STARTS */
+  .trusted-by-section p {
+    font-size: 11px;
+  }
+  .trusted-by-section img {
+    width: 56px;
+    height: 18px;
+  }
+  .trusted-by-section img:nth-child(5) {
+    display: none;
+  }
+  /* TRUSTED BY SECTION ENDS */
+
+  /* TIMELINE SECTION STARTS */
+  .timeline-section .row {
+    flex-direction: column;
+  }
+  .timeline-section img {
+    width: 384px;
+    height: 303px;
+  }
+  .timeline-section .right-side {
+    text-align: center;
+  }
+  .timeline-section .text-block-1 {
+    border-left: none;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 8px solid #794cff;
+  }
+  /* TIMELINE SECTION ENDS */
+
+  /* WORK SECTION STARTS */
+  .work-section h1 {
+    font-size: 18px;
+  }
+  .work-section .card-section .card {
+    text-align: center;
+  }
+  .work-section .card-section img {
+    width: 48px;
+    height: 48px;
+  }
+  .work-section .card-section .card:nth-child(n + 4) {
+    display: none;
+  }
+  .work-section .view-more {
+    display: block;
+    border: 1px solid #ece5ff;
+    border-radius: 4px;
+    background-color: #ece5ff;
+    color: #7259fa;
+    padding: 14px;
+    width: 340px;
+    margin: 48px 0px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  /* WORK SECTION ENDS */
+
+  /* WORK HOUR SECTION STARTS */
+  .hours-worked .row {
+    flex-direction: column-reverse;
+  }
+  .hours-worked img {
+    width: 100%;
+  }
+  .hours-worked .left-side h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+  }
+  .hours-worked .left-side p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 322px;
+  }
+  .hours-worked .left-side button {
+    border: 1px solid #796eff;
+    border-radius: 4px;
+    background-color: #796eff;
+    color: #ece5ff;
+    padding: 14px;
+    width: 340px;
+    margin: 14px 0px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  /* WORK HOUR SECTION ENDS */
+
+  /* CUSTOMER SECTION STARTS */
+  .customers-section .text-section h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .customers-section .text-section p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    width: 336px;
+  }
+  .customers-section .post-section .post-section-2,
+  .customers-section .post-section .post-section-3 {
+    display: none;
+  }
+  .post-section .post-section-1 {
+    flex-direction: column;
+    border-top: none;
+  }
+  .post-section .post-section-1 p {
+    text-align: center;
+  }
+  .store-section {
+    border-radius: 0px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .store-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+    width: 322px;
+  }
+  .store-section .store-icon {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  /* CUSTOMER SECTION ENDS */
+
+  /* FOOTER SECTION STARTS */
+  .footer-section .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-section h5 {
+    position: relative;
+  }
+  .footer-section h5 i {
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .footer-section p {
+    display: none;
+  }
+  .footer-social {
+    display: none;
+  }
+  .footer-copyright p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #d9dbe1;
+  }
+  /* FOOTER SECTION ENDS */
+}
