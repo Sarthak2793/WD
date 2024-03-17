@@ -1,0 +1,253 @@
+/* For tablet */
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .navbar .text h2 {
+    font-size: 22px;
+  }
+  .header-first-line p {
+    font-size: 14px;
+  }
+  .main .nav-items li {
+    font-size: 12px;
+  }
+  .main .main-section-text {
+    padding: 60px 0px;
+    text-align: center;
+  }
+  .main .main-section-text p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .slider-cards-section {
+    transform: translateY(20%);
+  }
+  .slider-cards-section .slider-cards {
+    padding: 10px 20px;
+    width: 31%;
+  }
+  .meeting .meeting-heading h3 {
+    margin-top: 60px;
+  }
+  .meeting .col-left {
+    display: none;
+  }
+  .meeting .col-right .catg-card {
+    width: 48%;
+  }
+
+  .meeting .col .col-right {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    row-gap: 30px;
+  }
+  .degree-section {
+    padding: 60px 0px;
+  }
+  .degree-section .accordian-section h4 {
+    margin-bottom: 0px;
+  }
+  .degree-section .row {
+    display: flex;
+    justify-content: space-around;
+  }
+  .degree-section .col .accordian-section {
+    padding: 22px;
+  }
+  .degree-section .deg-apply:nth-child(2) {
+    margin-bottom: 0px;
+  }
+  .contact-us .row {
+    flex-direction: column;
+  }
+  .course-section {
+    padding: 20px 0px;
+  }
+  .course-section .course-heading h3 {
+    text-align: center;
+  }
+  .course-section .course-card:nth-child(3) {
+    display: none;
+  }
+  .course-section .course-card {
+    width: 30%;
+  }
+  .course-section .course-card-lower p {
+    margin-bottom: 20px;
+  }
+  .course-section .course-card .course-card-lower {
+    padding: 16px;
+  }
+  .course-section .course-card .img-1,
+  .course-section .course-card .img-2,
+  .course-section .course-card .img-4 {
+    padding: 60px 0px;
+  }
+  .course-section .row .course-nav {
+    display: none;
+  }
+  .course-section .bottom-navs {
+    padding: 30px 0px;
+  }
+  .university-section {
+    padding: 40px 0px;
+  }
+  .university-section .row {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .university-section .row .col {
+    width: 100%;
+    justify-content: center;
+  }
+  .university-section .col .fact-section {
+    text-align: center;
+  }
+  .university-section .fact-numbers-section .fact-card:nth-child(even) {
+    transform: translateY(0px);
+  }
+  .university-section .fact-numbers-section {
+    justify-content: space-around;
+  }
+  .contact-us {
+    padding: 50px 0px;
+  }
+  .contact-us .contact-form {
+    text-align: center;
+  }
+  .contact-us .contact-form input {
+    font-size: 12px;
+  }
+  .contact-us .contact-form textarea {
+    font-size: 12px;
+  }
+  .contact-us .row {
+    gap: 50px;
+  }
+  .contact-us .col:nth-child(2) {
+    width: 75%;
+    text-align: center;
+  }
+}
+
+/* For mobile */
+@media only screen and (max-width: 414px) {
+  .container {
+    max-width: 396px;
+  }
+  .header-first-line p {
+    display: none;
+  }
+  .navbar .nav-items {
+    display: none;
+  }
+  .main .navbar {
+    padding: 16px 0px;
+  }
+  .navbar .text h2 {
+    font-size: 18px;
+  }
+  .navbar .nav-toggler i {
+    font-size: 20px;
+  }
+  .nav-toggler {
+    display: block;
+  }
+  .main .main-section-text {
+    padding: 40px 0px;
+  }
+  .main .main-section-text h1 {
+    font-size: 22px;
+  }
+  .main .main-section-text .join-now {
+    font-size: 12px;
+  }
+  .slider-cards-section {
+    transform: translateY(8%);
+  }
+  .slider-cards-section .slider-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .slider-cards-section .slider-cards {
+    width: 90%;
+  }
+  .meeting .meeting-heading h3 {
+    font-size: 20px;
+    margin-top: 70px;
+  }
+  .meeting .col .col-right {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .meeting .col-right .catg-card {
+    width: 90%;
+  }
+  .meeting .catg-card .card-upper {
+    padding: 80px 0px;
+  }
+  .meeting .col-right .card-text p {
+    width: 100%;
+  }
+  .degree-section {
+    padding: 50px 0px;
+  }
+  .degree-section .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .degree-section .col {
+    width: 90%;
+  }
+  .degree-section .deg-apply {
+    margin-bottom: 30px;
+  }
+  .course-section {
+    padding: 30px 0px;
+  }
+  .course-section .course-heading h3 {
+    font-size: 20px;
+  }
+  .course-section .course-card-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .course-section .course-card {
+    width: 100%;
+  }
+  .course-section .bottom-navs {
+    display: none;
+  }
+  .university-section .fact-section h1 {
+    font-size: 22px;
+  }
+  .university-section .video-section iframe {
+    width: 100%;
+    height: 200px;
+  }
+  .contact-us .col:nth-child(1) {
+    width: 90%;
+  }
+  .contact-us .col:nth-child(2) {
+    width: 90%;
+  }
+  .contact-us .contact-form input {
+    width: 100%;
+  }
+  .meeting .slider-cards-section .left-nav,
+  .meeting .slider-cards-section .right-nav {
+    display: none;
+  }
+}

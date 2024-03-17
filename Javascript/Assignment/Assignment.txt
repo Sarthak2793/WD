@@ -1,0 +1,98 @@
+Module (JAVASCRIPT BASIC & DOM) – 4
+
+1)  hat is JavaScript?
+
+Ans - JavaScript is a lightweight, cross-platform, single-threaded, and interpreted compiled programming language. It is also known as the scripting language for webpages.
+         It is well-known for the development of web pages.
+       - JavaScript is a weakly typed language. JavaScript can be used for Client-side developments as well as Server-side developments.
+
+2)  What is the use of isNaN function?
+
+Ans - In JavaScript NaN is short for "Not-a-Number". The isNaN() method returns true if a value is NaN. The isNaN() method converts the value to a number before testing it.
+
+Ex -
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+  var text = "Hello";
+  document.getElementById("demo").innerHTML = isNaN(text);
+</script>
+
+</body>
+</html>
+
+3) What is negative Infinity?
+
+Ans - NEGATIVE_INFINITY is a property of the JavaScript Number object. You can only use it as Number. NEGATIVE_INFINITY.
+
+Ex-
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="txt"></p>
+
+<script>
+document.getElementById("txt").innerHTML = Number.NEGATIVE_INFINITY;
+</script>
+
+</body>
+</html>
+
+4) Which company developed JavaScript?
+
+Ans - JavaScript was developed by Netscape Communications Corporation, with Brendan Eich being the original creator. It was first released in 1995.
+
+5) What are undeclared and undefined variables?
+
+Ans - Undeclared : It occurs when a variable which hasn’t been declared using var, let or const is being tried to access. 
+         (Ex - console.log(x); Here we didn't declare x so it will throw an error as undeclared)
+
+         Undefined : It occurs when a variable has been declared using var, let or const but isn’t given a value.
+         (Ex - let x;
+                 console.log(x); Here we declared a variable but not give any value so it will throw an error Undefined)
+
+6) Write the code for adding new elements dynamically? 
+
+Ans - 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Elements Dynamically</title>
+    <style>
+      button {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dynamic-elements"></div>
+    <button id="add-element-btn">Add New Element</button>
+
+    <script>
+      function addNewElement() {
+        var newElement = document.createElement("h1");
+        newElement.textContent = "Dynamically created H1 element.";
+        document.getElementById("dynamic-elements").appendChild(newElement);
+      }
+      var addButton = document.getElementById("add-element-btn");
+      addButton.addEventListener("click", addNewElement);
+    </script>
+  </body>
+</html>
+
+7) What is the difference between ViewState and SessionState?
+
+Ans - ViewState : It can be used to store information that you wish to access from same web page.
+
+         SessionState: It can be used to store information that you wish to access on different web pages.
+
+
+
