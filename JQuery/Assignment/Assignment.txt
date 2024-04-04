@@ -1,0 +1,303 @@
+Module (JQuery Basic, Effects & Advanced) – 5
+
+1) What is jQuery?
+
+Ans - jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation,
+         and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+       - jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+2) How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery , JQuery Animation?
+
+Ans - 
+
+I) Apply CSS using Jquery :
+
+ Ex : <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("#red").css("background-color", "red");
+        $("#green").css("background-color", "green");
+        $("#blue").css("background-color", "blue");
+      });
+    });
+  </script>
+  <body>
+    <p id="red">This is a paragraph.</p>
+    <p id="green">This is a paragraph.</p>
+    <p id="blue">This is a paragraph.</p>
+
+    <button>Set background-color of p</button>
+  </body>
+</html>
+
+II) How to Add Class and Remove Class in Jquery :
+
+ Ex : Add Class
+      
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("p").addClass("bg-color");
+      });
+    });
+  </script>
+  <style>
+    .bg-color {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+  <body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Add classes to elements</button>
+  </body>
+</html>
+
+ Ex : Remove Class
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $(".bg").removeClass("bg");
+      });
+    });
+  </script>
+  <style>
+    .bg {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+  <body>
+    <p class="bg">This is a paragraph.</p>
+    <p class="bg">This is another paragraph.</p>
+
+    <button>Add classes to elements</button>
+  </body>
+</html>
+
+III) JQuery Animation :
+
+ Ex : Animation
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $(".div1").animate({ width: "200px", left: "250px", top: "100px" });
+      });
+    });
+  </script>
+  <style>
+    .div1 {
+      margin-top: 50px;
+      background-color: #98bf21;
+      height: 100px;
+      width: 100px;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <button>Start Animation</button>
+
+    <div class="div1"></div>
+  </body>
+</html>
+
+3) How to create slider with animation?
+
+Ans - 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <style>
+      div img {
+        height: 500px;
+        width: 100%;
+      }
+      .img-gallery {
+        width: 90%;
+        margin: 0px auto;
+      }
+      .slick-next {
+        right: -32px;
+      }
+      .slick-prev {
+        left: -38px;
+      }
+      .img-gallery .slick-next:before,
+      .img-gallery .slick-prev:before {
+        color: green;
+        font-size: 30px;
+      }
+      .slick-slide img {
+        width: 100%;
+        border: 2px solid #fff;
+      }
+      .slick-dots li button:before {
+        font-size: 12px;
+      }
+      .slick-dots {
+        bottom: -45px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="img-gallery">
+      <div><img src="/imgs/adam-kool-ndN00KmbJ1c-unsplash.jpg" alt="" /></div>
+      <div>
+        <img src="/imgs/dawid-zawila--G3rw6Y02D0-unsplash.jpg" alt="" />
+      </div>
+      <div>
+        <img src="/imgs/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg" alt="" />
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".img-gallery").slick({
+          dots: true,
+        });
+      });
+    </script>
+  </body>
+</html>
+
+4) Event bubbling tickling example 
+
+Ans - 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        border: 2px solid black;
+        padding: 10px;
+      }
+      .body-div {
+        border: 2px solid black;
+        height: 60vh;
+        padding: 10px;
+      }
+      .child-1 {
+        border: 2px solid black;
+        height: 70%;
+        padding: 10px;
+      }
+      .child-2 {
+        border: 2px solid black;
+        height: 70%;
+        padding: 10px;
+      }
+      .child-3 {
+        border: 2px solid black;
+        height: 50%;
+        padding: 10px;
+      }
+      ul li {
+        list-style: none;
+      }
+      .active-div {
+        border: 2px solid red;
+      }
+      .active-div > p {
+        color: red;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("body, .body-div, .child-1, .child-2, .child-3 , .child-4").hover(
+          function () {
+            $(this).addClass("active-div");
+          },
+          function () {
+            $(this).removeClass("active-div");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div class="body-div">
+      <p>body(great-great-grand parent)</p>
+      <div class="child-1">
+        <p>div(great-grand parent)</p>
+        <ul class="child-2">
+          <p>ul(greand-parent)</p>
+          <li class="child-3">
+            <p>li(direct parent)</p>
+            <input class="child-4" type="text" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
