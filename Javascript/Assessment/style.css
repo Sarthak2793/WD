@@ -1,0 +1,43 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: rgb(56, 56, 56);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 20px auto;
+}
+#inputField {
+  padding: 9px 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+#addToDo {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: bold;
+  background-color: orange;
+  color: brown;
+  font-size: 20px;
+}
+.ToDos {
+  margin-top: 25px;
+  font-size: 20px;
+  /* padding: 10px; */
+  background-color: white;
+  border-radius: 5px;
+  outline: none;
+}
+.ToDos p {
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid rgb(124, 124, 124, 0.2);
+}
